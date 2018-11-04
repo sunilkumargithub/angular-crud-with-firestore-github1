@@ -1,0 +1,11 @@
+
+<button (click)="onclick()">Addemployee</button>
+<div>
+  Employees Are
+</div>
+<button (click)="ongetemployee()">getemployee</button>
+<div *ngFor="let emp of allemployee">
+  {{emp.id}} ... {{emp.data.name}}&nbsp;&nbsp;{{emp.data.mobile}}&nbsp;&nbsp;{{emp.data.salary}}
+  <button (click)="ondelete(emp.id)">D</button>&nbsp;&nbsp;
+  <button (click)="onedit(emp.id)">E</button>
+</div>

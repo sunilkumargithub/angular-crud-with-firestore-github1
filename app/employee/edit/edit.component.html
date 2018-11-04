@@ -1,0 +1,21 @@
+
+<form (ngSubmit)="onsubmit(form)" #form="ngForm">
+  <div *ngFor="let emp of edititem">
+    <div class="row">
+<input type="hidden" ngModel="{{emp.id}}" name="id">
+<label for="name">Name</label>
+<input type="text" ngModel="{{emp.data.name}}" name="name">
+
+
+    </div>
+    <div class="row">
+      <label for="mobile">mobile</label>
+      <input type="number" ngModel="{{emp.data.mobile}}" name="mobile">
+          </div>
+          <div class="row">
+            <label for="salary">salary</label>
+            <input type="number" ngModel="{{emp.data.salary}}" name="salary">
+                </div>
+                <button type="submit">update</button>
+  </div>
+</form>
